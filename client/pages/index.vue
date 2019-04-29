@@ -1,21 +1,12 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      Index
-    </v-flex>
-  </v-layout>
+  <main-page />
 </template>
 
 <script>
+import MainPage from '@/components/MainPage.vue'
 export default {
-  components: {}
+  components: {
+    MainPage
+  }
 }
 </script>
