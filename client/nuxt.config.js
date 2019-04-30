@@ -54,7 +54,7 @@ export default {
   ** Axios module configuration
   */
   axios: {
-    baseURL: '127.0.0.1:3333/'
+    baseURL: 'http://127.0.0.1:3333/'
   },
 
   /*

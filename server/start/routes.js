@@ -22,3 +22,7 @@ Route.get('/', () => {
 
 Route.resource('emails', 'EmailController')
   .apiOnly()
+
+Route
+  .resource('towns', 'TownController')
+  .apiOnly()

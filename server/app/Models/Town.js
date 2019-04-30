@@ -5,7 +5,7 @@ const Model = use('Model')
 
 class Town extends Model {
 
-  static get createdAtColum() {
+  static get createdAtColumn() {
     return null
   }
 

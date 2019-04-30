@@ -48,7 +48,16 @@ export default {
     async post() {
       const town = new FormData()
       town.set('name', this.townName)
-      await this.$axios.$post('towns', town)
+      const config = {
+        headers: {
+          'content-type': 'application/json'
+        }
+      }
+      try {
+        await this.$axios.$post('towns', town, config)
+      } catch (e) {
+        console.log(e)
+      }
     }
   }
 }

@@ -6,8 +6,12 @@ const Schema = use('Schema')
 class TownsSchema extends Schema {
   up () {
     this.create('towns', (table) => {
-      table.increments()
-      table.string('name', 25).notNullable()
+      table
+        .increments()
+      table
+        .string('name', 25)
+        .notNullable()
+        .unique()
     })
   }
 
