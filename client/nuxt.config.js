@@ -54,7 +54,7 @@ export default {
   ** Axios module configuration
   */
   axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+    baseURL: '127.0.0.1:3333/'
   },
 
   /*

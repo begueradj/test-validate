@@ -45,8 +45,10 @@ export default {
   },
 
   methods: {
-    post() {
-      console.log(this.townName)
+    async post() {
+      const town = new FormData()
+      town.set('name', this.townName)
+      await this.$axios.$post('towns', town)
     }
   }
 }
