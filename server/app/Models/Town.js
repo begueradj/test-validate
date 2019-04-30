@@ -4,6 +4,14 @@
 const Model = use('Model')
 
 class Town extends Model {
+
+  static get createdAtColum() {
+    return null
+  }
+
+  static get updatedAtColumn() {
+    return null
+  }
 }
 
 module.exports = Town
