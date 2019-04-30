@@ -11,8 +11,24 @@
     >
       <v-flex
         xs12
+        sm4
+        offset-sm4
       >
-        Main page
+        <v-text-field
+          v-model="townName"
+          label="Town name"
+        />
+      </v-flex>
+      <v-flex
+        xs12
+        sm4
+        offset-sm4
+      >
+        <v-btn
+          @click="post"
+        >
+          Post
+        </v-btn>
       </v-flex>
     </v-layout>
   </v-container>
@@ -20,6 +36,18 @@
 
 <script>
 export default {
-  name: 'MainPage'
+  name: 'MainPage',
+
+  data() {
+    return {
+      townName: ''
+    }
+  },
+
+  methods: {
+    post() {
+      console.log(this.townName)
+    }
+  }
 }
 </script>
