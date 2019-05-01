@@ -56,7 +56,8 @@ export default {
       try {
         await this.$axios.$post('towns', town, config)
       } catch (e) {
-        console.log(e.message)
+        console.log(e.response.status)
+        console.log(e.response.data[0].message)
       }
     }
   }

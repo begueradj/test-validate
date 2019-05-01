@@ -15,14 +15,12 @@ class StoreTown {
     }
   }
 
-  async fails() {
+  async fails(errorMessages) {
     return this
       .ctx
       .response
       .status(403)
-      .json({
-        message: 'Hello there'
-      })
+      .send(errorMessages)
   }
 }
 
