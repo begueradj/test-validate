@@ -50,7 +50,7 @@ export default {
       town.set('name', this.townName)
       const config = {
         headers: {
-          'content-type': 'application/json'
+          'accept': 'application/json'
         }
       }
       try {

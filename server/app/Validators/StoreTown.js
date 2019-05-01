@@ -4,23 +4,24 @@ class StoreTown {
   
   get rules () {
     return {
-      name: "required"
+      name: "required|unique:towns"
     }
   }
 
   get messages() {
     return {
-      'name.required': 'Data needed'
+      'name.required': 'Data needed',
+      'name.unique': 'Do not store duplicate data'
     }
   }
 
-  async fails(errorMessages) {
+  async fails() {
     return this
       .ctx
       .response
       .status(403)
       .json({
-        message: errorMessages[0].message
+        message: 'Hello there'
       })
   }
 }
